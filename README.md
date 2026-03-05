@@ -14,4 +14,12 @@ Simulate the Navier-Stokes equations with a Spectral method
 python navier-stokes-spectral.py
 ```
 
+Optional `pyfftw` backend:
+
+```
+python3 -m pip install --user pyfftw
+NAVIER_STOKES_FFT_BACKEND=numpy python3 navier-stokes-spectral.py
+NAVIER_STOKES_FFT_BACKEND=pyfftw NAVIER_STOKES_FFTW_THREADS=10 python3 navier-stokes-spectral.py
+```
+
 ![Simulation](./navier-stokes-spectral.png)
