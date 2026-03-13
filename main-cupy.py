@@ -73,7 +73,7 @@ def main():
     dt = 0.001  # timestep
     tOut = 0.01  # draw frequency
     nu = 0.001  # viscosity
-    plotRealTime = not benchMode  # switch on for plotting as the simulation goes along
+    plotRealTime = not benchMode
 
     # Domain [0,1] x [0,1]
     dtype = cp.float64
@@ -96,7 +96,7 @@ def main():
     kSq = kx * kx + ky * ky
     kSq_inv = cp.empty_like(kSq)
     kSq_inv[:] = 1.0 / kSq
-    kSq_inv[kSq == 0] = 0.0  # better than 1; avoids injecting a mode
+    kSq_inv[kSq == 0] = 1
 
     # dealias with the 2/3 rule
     dealias = (

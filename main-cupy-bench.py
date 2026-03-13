@@ -100,9 +100,6 @@ def simulate_gpu(N=400, tEnd=1.0, dt=0.001, nu=0.001):
         vx = diffusion_solve(vx, dt, nu, kSq)
         vy = diffusion_solve(vy, dt, nu, kSq)
 
-        # optional: keep this only if you want full original workload
-        _ = curl(vx, vy, kx, ky)
-
         t += dt
 
     end.record()
