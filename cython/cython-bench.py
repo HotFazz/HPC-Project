@@ -150,12 +150,12 @@ def benchmark(runs, warmup, **sim_kwargs):
 
 
 def main():
-    runs = 20
-    warmup = 5
-    N = 100
+    runs = 1
+    warmup = 0
+    N = 400
     tEnd = 1.0
     dt = 0.001
-    nu = 0.005
+    nu = 0.001
 
     sim_kwargs = dict(N=N, tEnd=tEnd, dt=dt, nu=nu)
 
